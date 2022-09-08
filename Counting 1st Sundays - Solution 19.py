@@ -31,10 +31,6 @@ while year < 2001:
     wday = next(dayiter)
     if month == "January" and dcount == 1:
         year += 1
-        if leapyear == False:
-            leapcount += 1
-        if leapyear == True:
-            leapcount = 0
     if dcount == 28 and month == "February" and leapyear != True:
         month = next(monthiter)
         totaldcount += dcount
@@ -57,7 +53,5 @@ while year < 2001:
         dayiter = iter(days)
     if month == "December":
         monthiter = iter(months)
-    if leapcount == 4:
-        leapyear == True
 answer = s1count
 print(answer)
